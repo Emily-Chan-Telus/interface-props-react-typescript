@@ -1,18 +1,18 @@
 import React from "react";
-import Budget from "./interfaces";
+import Budget from "../interfaces";
 
 interface BudgetProps {
     budgets: Budget[];
 }
 
-export const BudgetOverview: React.FC<BudgetProps> = ({budgets}: BudgetProps) => {
+export const BudgetOverview: React.FC<BudgetProps> = ({budgets}: BudgetProps,) => {
     return <div className="Budget-Overview">
-        <table>
+    <table>
             <tbody>
             <tr className="Table-Header">
                 <td>
                     <h4>CATEGORY</h4>
-                </td>
+                </td> 
                 <td>
                     <h4>BUDGETED</h4>
                 </td>
