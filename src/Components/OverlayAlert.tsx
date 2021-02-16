@@ -2,11 +2,11 @@ import React from "react";
 import { Alert } from '@material-ui/lab';
 import { Error, Success } from "../interfaces";
 
-const OverlayAlert = ({ message, status }: Error) => {
+
+const OverlayAlert = ({ message, severity }: Error) => {
     return (
         <div>
-            {console.log("alert")}
-            <Alert severity="warning">{message}</Alert>
+            <Alert severity={severity} onClose={() => { }}>{message} </Alert>
         </div>
     )
 }

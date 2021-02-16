@@ -1,11 +1,18 @@
+type Severity = "error" | "success" | "info" | "warning" | undefined;
+
 export interface Error {
     message: string,
-    status: "Error"
+    severity: Severity
 }
 
 export interface Success {
     message: string
-    status: "Success"
+    severity: Severity
+}
+
+export interface IOverlayComponent {
+    message: string
+    severity: Severity
 }
 
 export interface ICustomer {
@@ -15,6 +22,7 @@ export interface ICustomer {
 export interface AppState {
     customers?: ICustomer[];
     customersError?: boolean;
+    customersErrorMessage?: "";
 }
 
 /*

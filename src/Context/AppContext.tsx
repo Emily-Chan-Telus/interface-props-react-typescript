@@ -13,7 +13,8 @@ const AppContext = createContext<IAppContext>([{}, () => { }]);
 const AppContextProvider = ({ children }: { children: any }) => {
     const [state, setState] = useState<AppState>({
         customers: [],
-        customersError: false
+        customersError: false,
+        customersErrorMessage: ""
     });
 
     return (
